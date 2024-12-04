@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alien Communication System</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h1>Alien Communication System</h1>
+  <p>Check the console to see how tasks are processed!</p>
 
+  <script>
+    console.log("Start of program");
+
+    // Macro-task 1: setTimeout
+    setTimeout(() => {
+      console.log("Macro-task 1 (setTimeout) executed");
+    }, 0);
+
+    // Micro-task 1: Promise
+    Promise.resolve().then(() => {
+      console.log("Micro-task 1 (Promise) executed");
+    });
+
+    // Macro-task 2: setTimeout
+    setTimeout(() => {
+      console.log("Macro-task 2 (setTimeout) executed");
+    }, 0);
+
+    // Micro-task 2: Promise
+    Promise.resolve().then(() => {
+      console.log("Micro-task 2 (Promise) executed");
+    });
+
+    // Macro-task 3: setTimeout
+    setTimeout(() => {
+      console.log("Macro-task 3 (setTimeout) executed");
+    }, 0);
+
+    console.log("End of program");
+
+    /*
+     Output sequence:
+     1. "Start of program"
+     2. "End of program"
+     3. "Micro-task 1 (Promise) executed"
+     4. "Micro-task 2 (Promise) executed"
+     5. "Macro-task 1 (setTimeout) executed"
+     6. "Macro-task 2 (setTimeout) executed"
+     7. "Macro-task 3 (setTimeout) executed"
+    */
+  </script>
 </body>
-
 </html>
